@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Reviews",
+        "infoPanel": [ {
+            "title": "Smart TV",
+            "image": "https://img.global.news.samsung.com/in/wp-content/uploads/2021/03/feature-Free-TV1.jpg",
+            "product": "Samsung",
+            "score": 74
+        },{
+            "title": "Iphone 15",
+            "image": "https://images.pexels.com/photos/18525573/pexels-photo-18525573/free-photo-of-isik-peyzaj-adam-insanlar.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "product": "Apple",
+            "score": 85
+        },{
+            "title": "Smart Watch",
+            "image": "https://images.pexels.com/photos/6846257/pexels-photo-6846257.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "product": "Xaomi",
+            "score": 92
+        },{
+            "title": "E-SUV",
+            "image": "https://images.pexels.com/photos/11591283/pexels-photo-11591283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "product": "Hyundai",
+            "score": 68
+        }] 
+    }
+]

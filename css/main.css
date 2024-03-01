@@ -1,0 +1,126 @@
+body, * {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    list-style-type: none;
+    padding: 0.1rem;
+}
+
+h1 {
+    text-align: center;
+}
+.menu {
+    background: #666;
+    list-style: none;
+    margin: 0;
+    position: relative;
+    border-radius: 12px;
+}
+
+.menu-item {
+    float: left;
+}
+
+.menu-item a {
+    color: #eee;
+    display: block;
+    text-decoration: none;
+    padding: 1em;
+}
+
+.menu-item a:hover {
+    color: #333;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 1em;
+}
+.menu-item-info a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding: 1em;
+}
+
+.menu-item-info a:hover {
+    color: #333;
+    background-color: #9d9898;
+    border-radius: 12px;
+    padding: 1em;
+}
+
+.sub-home {
+    display: none;
+    position: absolute;
+    left: 0;
+    border: 1px solid #ddd;
+    border-top: none;
+    width: 100%;
+    background-color: #9d9898;
+    border-radius: 12px;
+    padding: 0.3em;
+    color: #fff;
+}
+
+.account {
+    display: none;
+    position: absolute;
+    right: 0;
+    border: 1px solid #ddd;
+    border-top: none;
+    width: 20%;
+    background-color:#9d9898 ;
+    border-radius: 12px;
+    padding: 0.3em;
+}
+
+.menu-item > input[type=text] {
+    float: left;
+    font-size: 20px;
+    border-radius: 10px;
+    top: 22%;
+    left: 10%;
+    position: absolute;
+    width: 50%;
+}
+
+.menu-item button {
+    float: left;
+    padding: 6px 10px;
+    margin-left: 1px;
+    top: 25%;
+    left: 60%;
+    border-radius: 15px;
+    position: absolute;
+    background: #ddd;
+    font-size: 11px;
+    border: none;
+    cursor: pointer;
+}
+
+.cf {
+    clear: both;
+}
+
+.is-visible {
+    display: block;
+}
+
+.right-corner {
+    float: right;
+}
+.right-corner > a:hover {
+    background-color: #333;
+    color: lightblue;
+}
+
+#span1 {
+    text-decoration: underline;
+}
+
+header {
+    position: sticky;
+    z-index: 1;
+}
+
+h2:first-of-type {
+    text-align: center;
+}
