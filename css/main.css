@@ -40,11 +40,20 @@ h1 {
     padding: 1em;
 }
 
-.menu-item-info a:hover {
+.sub-home a:hover {
     color: #333;
     background-color: #9d9898;
     border-radius: 12px;
     padding: 1em;
+}
+
+.sub-home-image {
+    float: left;
+    height: 120px;
+    width: 190px;
+    padding: 0.2em;
+    border: 1px solid #ddd;
+    margin: 0.2em;
 }
 
 .sub-home {

@@ -34,6 +34,13 @@ $(function(){
                     '<div class="sub-home"></div>' + 
                 '</li>');
 
+        if(data.infoPanel && data.infoPanel.length) {
+            infoPanel = $('div.sub-home', el);
+            data.infoPanel.forEach(function(entry){
+                infoPanel.append("<img class='sub-home-image' src='" + entry.image + "'>");
+            })
+        }
+
         return el;
     }
 
@@ -47,6 +54,10 @@ $(function(){
         data.forEach(function(menuItem){
             container.append(buildMenuItem(menuItem));
         })
-    })
 
+        container.append('<div class="cf"></div>');
+        
+        handleMenu();
+    })
+    
 });
