@@ -1,6 +1,6 @@
 [
     {
-        "title": "Reviews",
+        "mainTitle": "Reviews",
         "infoPanel": [ {
             "title": "Smart TV",
             "image": "https://img.global.news.samsung.com/in/wp-content/uploads/2021/03/feature-Free-TV1.jpg",
@@ -21,6 +21,21 @@
             "image": "https://images.pexels.com/photos/11591283/pexels-photo-11591283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             "product": "Hyundai",
             "score": 68
+        },{
+            "title": "Vacuum Cleaner",
+            "image": "https://images.pexels.com/photos/10567499/pexels-photo-10567499.jpeg",
+            "product": "No-brand",
+            "score": 75
+        },{
+            "title": "Hair Dryer",
+            "image": "https://images.pexels.com/photos/13714794/pexels-photo-13714794.jpeg",
+            "product": "Dyson",
+            "score": 82
+        },{
+            "title": "E-Bike",
+            "image": "https://images.pexels.com/photos/15218726/pexels-photo-15218726/free-photo-of-woman-standing-beside-electric-bicycle.jpeg",
+            "product": "Svitch",
+            "score": 98
         }] 
     }
 ]

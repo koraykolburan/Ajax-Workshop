@@ -33,28 +33,6 @@ h1 {
     border-radius: 12px;
     padding: 1em;
 }
-.menu-item-info a {
-    color: #fff;
-    display: block;
-    text-decoration: none;
-    padding: 1em;
-}
-
-.sub-home a:hover {
-    color: #333;
-    background-color: #9d9898;
-    border-radius: 12px;
-    padding: 1em;
-}
-
-.sub-home-image {
-    float: left;
-    height: 120px;
-    width: 190px;
-    padding: 0.2em;
-    border: 1px solid #ddd;
-    margin: 0.2em;
-}
 
 .sub-home {
     display: none;
@@ -69,19 +47,45 @@ h1 {
     color: #fff;
 }
 
-.account {
-    display: none;
-    position: absolute;
-    right: 0;
-    border: 1px solid #ddd;
-    border-top: none;
-    width: 20%;
-    background-color:#9d9898 ;
-    border-radius: 12px;
-    padding: 0.3em;
+.sub-home > ul > li {
+    float: left;
 }
 
-.menu-item > input[type=text] {
+.sub-home > ul > li > a {
+    position: relative;
+    text-align: center;
+    font-size: 1.2em;
+    display: grid;
+}
+
+.sub-home > ul > li > a:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    color: #333;
+    background-color: #9d9898;
+    padding: 1em;
+}
+
+.sub-home-image {
+    float: left;
+    height: 120px;
+    width: 190px;
+    padding: 0.2em;
+    margin: 0.2em;
+    border-radius: 12px;
+}
+
+.sub-home > ul > li > a > span {
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: small;
+    font-style: italic;
+}
+
+/* Search Bar */
+.menu-item > input[type=text], #plc1 {
     float: left;
     font-size: 20px;
     border-radius: 10px;
@@ -91,6 +95,7 @@ h1 {
     width: 50%;
 }
 
+/* Search Button */
 .menu-item button {
     float: left;
     padding: 6px 10px;
@@ -103,6 +108,43 @@ h1 {
     font-size: 11px;
     border: none;
     cursor: pointer;
+}
+
+#btn1:hover {
+    opacity: 0.6;
+}
+
+/* Responsive */
+@media screen and (max-width: 820px) {
+    .menu-item, #listAccount, #favs {
+        float: none;
+    }
+    #plc1, #btn1, #home, #account, #subAccount, #favs1 {
+        position: relative;
+        text-align: center;
+        margin: 0;
+        padding: 12px;
+        font-size: 1.2rem;
+        left: 0;
+        top: 0;
+        width: 100%;
+        float: none;
+    }
+    .sub-home {
+        z-index: 1;
+    }
+}
+
+.account {
+    display: none;
+    position: absolute;
+    right: 0;
+    border: 1px solid #ddd;
+    border-top: none;
+    width: 20%;
+    background-color:#9d9898 ;
+    border-radius: 12px;
+    padding: 0.3em;
 }
 
 .cf {
