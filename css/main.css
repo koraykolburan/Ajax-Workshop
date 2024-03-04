@@ -130,6 +130,9 @@ h1 {
         width: 100%;
         float: none;
     }
+    #subAccount {
+        height: 145px;
+    }
     .sub-home {
         z-index: 1;
     }

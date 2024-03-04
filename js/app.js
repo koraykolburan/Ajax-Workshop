@@ -15,7 +15,7 @@ $(function(){  // (1) All of our code to be run only when the DOM has been compl
             function(){
                 home.stop().fadeOut();
             }
-        )
+        );
         $('#account, .account').hover(
             function(){
                 accnt.stop().slideDown();  // If you want to hover on submenu, you must use stop() in both functions.
@@ -23,7 +23,15 @@ $(function(){  // (1) All of our code to be run only when the DOM has been compl
             function(){
                 accnt.stop().slideUp();
             }
-        )
+        );
+        
+       $('#home, #account').on("click touchstart", dropDown); //For Responsive
+
+        function dropDown(evt){
+            $(this).siblings('.sub-home, .account').toggle('.is-visible');
+            return false;
+        };
+        
     }
 
     function buildMenuItem(data){  // (3) ---------------- This function builds the MENU ITEM --------------------
