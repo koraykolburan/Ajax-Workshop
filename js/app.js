@@ -14,7 +14,7 @@ $(function(){  // (1) All of our code to be run only when the DOM has been compl
             },
             function(){
                 home.stop().fadeOut();
-            }
+            },
         );
         $('#account, .account').hover(
             function(){
@@ -25,12 +25,13 @@ $(function(){  // (1) All of our code to be run only when the DOM has been compl
             }
         );
         
-       $('#home, #account').on("click touchstart", dropDown); //For Responsive
-
+    /*   $('#home, #account').on("click touchstart touchend", dropDown); //For Responsive
+    
         function dropDown(evt){
             $(this).siblings('.sub-home, .account').toggle('.is-visible');
+            {passive:false}
             return false;
-        };
+        }; */
         
     }
 
