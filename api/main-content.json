@@ -1,0 +1,26 @@
+[
+    {
+        "mainNews": "Top Stories",
+        "showCase": [ {
+            "title": "First",
+            "image": "https://picsum.photos/600/400",
+            "news": "AAAAA-BBBBB-CCCC"
+        },{
+            "title": "Second",
+            "image": "https://picsum.photos/600/400",
+            "news": "AAAAA-BBBBB-CCCC"
+        },{
+            "title": "Third",
+            "image": "https://picsum.photos/600/400",
+            "news": "AAAAA-BBBBB-CCCC"
+        },{
+            "title": "Fourth",
+            "image": "https://picsum.photos/600/400",
+            "news": "AAAAA-BBBBB-CCCC"
+        },{
+            "title": "Fifth",
+            "image": "https://picsum.photos/g/600/400",
+            "news": "AAAAA-BBBBB-CCCC"
+        }] 
+    }
+]

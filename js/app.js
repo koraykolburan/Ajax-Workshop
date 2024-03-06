@@ -1,4 +1,4 @@
-
+//----------------- NAVBAR --------------------------
 $(function(){  // (1) All of our code to be run only when the DOM has been completely loaded.
     
     let container = $('#main-menu'); 
@@ -25,7 +25,7 @@ $(function(){  // (1) All of our code to be run only when the DOM has been compl
             }
         );
         
-        
+
         //For Responsive Menu
 
         $('#home, #account').on("touchstart.noPreventDefault", dropDown); 
@@ -38,8 +38,8 @@ $(function(){  // (1) All of our code to be run only when the DOM has been compl
     }
 
     function buildMenuItem(data){  // (3) ---------------- This function builds the MENU ITEM --------------------
-        let el,
-            infoPanel;
+        let el, // >> this is for sub menu
+            infoPanel; // >> this is for images and titles on the sub menu
         el = $('<li class="menu-item">' +     // Sub Menu Items
                     '<a href="#" id="home">' + 
                         data.mainTitle + 
@@ -113,7 +113,21 @@ $(function(){  // (1) All of our code to be run only when the DOM has been compl
 
         handleMenu(); // HOVER & Sub-Menu
     })
-
-    
     
 });
+
+// ------------------- Main Content ------------------------
+$(function(){
+
+    let container2 = $('#main-content');
+        container2.empty();
+    
+
+    $.get('api/main-content.json', function(data2){
+        console.log(data2)
+        //Will be add main contents
+
+
+    })
+
+})  
