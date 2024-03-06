@@ -1,6 +1,6 @@
 
 $(function(){  // (1) All of our code to be run only when the DOM has been completely loaded.
-
+    
     let container = $('#main-menu'); 
 
     function handleMenu(){         //----------- This is for HOVERING MOUSE ITEM (with submenu) ----------
@@ -25,13 +25,15 @@ $(function(){  // (1) All of our code to be run only when the DOM has been compl
             }
         );
         
-    /*   $('#home, #account').on("click touchstart touchend", dropDown); //For Responsive
+        
+        //For Responsive Menu
+
+        $('#home, #account').on("touchstart.noPreventDefault", dropDown); 
     
         function dropDown(evt){
             $(this).siblings('.sub-home, .account').toggle('.is-visible');
-            {passive:false}
             return false;
-        }; */
+        }; 
         
     }
 

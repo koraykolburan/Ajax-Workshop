@@ -88,7 +88,7 @@ h1 {
 .menu-item > input[type=text], #plc1 {
     float: left;
     font-size: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     top: 22%;
     left: 10%;
     position: absolute;
@@ -136,7 +136,37 @@ h1 {
     .sub-home {
         z-index: 1;
     }
+    
 }
+
+@media screen and (max-width: 477px) {
+    .sub-home > ul > li > a {
+        display: inline;
+    }
+    .sub-home > ul > li > a > span{
+        top: 100%;
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 417px) {
+    .sub-home > ul > li > a {
+        display: grid;
+        left: 25%;
+    }
+    .sub-home > ul > li > a > span{
+        top: 82%;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .sub-home > ul > li > a {
+        display: grid;
+        left: 5%;
+    }
+}
+
 
 .account {
     display: none;
