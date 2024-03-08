@@ -211,3 +211,25 @@ h2:first-of-type {
 
 /* Main Content */
 
+#main-content {
+    /* width:75%;
+    height: 60%; */
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+.content-items {
+    float: left;
+}
+
+.sub-content {
+    display: block;
+}
+.sub-content-image {
+    float: left;
+    height: 120px;
+    width: 190px;
+    padding: 0.2em;
+    margin: 0.2em;
+    border-radius: 12px;
+}

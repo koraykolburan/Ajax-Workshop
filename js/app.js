@@ -1,9 +1,9 @@
 //----------------- NAVBAR --------------------------
-$(function(){  // (1) All of our code to be run only when the DOM has been completely loaded.
+$(function(){  // (FIRST) All of our code to be run only when the DOM has been completely loaded.
     
     let container = $('#main-menu'); 
 
-    function handleMenu(){         //----------- This is for HOVERING MOUSE ITEM (with submenu) ----------
+    function handleMenu(){    // (1)   ----------- This is for HOVERING MOUSE ITEM (with submenu) ----------
         let menu1 = $('.menu-item > a');
         let home = $('.sub-home');
         let accnt = $('.account');
@@ -38,9 +38,9 @@ $(function(){  // (1) All of our code to be run only when the DOM has been compl
     }
 
     function buildMenuItem(data){  // (3) ---------------- This function builds the MENU ITEM --------------------
-        let el, // >> this is for sub menu
+        let el,
             infoPanel; // >> this is for images and titles on the sub menu
-        el = $('<li class="menu-item">' +     // Sub Menu Items
+        el = $('<li class="menu-item">' +     // Main Menu Items
                     '<a href="#" id="home">' + 
                         data.mainTitle + 
                     '</a>' + 
@@ -50,7 +50,7 @@ $(function(){  // (1) All of our code to be run only when the DOM has been compl
                     '</div>' +
                 '</li>');
 
-        if(data.infoPanel && data.infoPanel.length) { // Adding images to sub menu
+        if(data.infoPanel && data.infoPanel.length) { // Adding img and titles to sub menu from JSON
             infoPanel = $('div.sub-home>ul', el);
             data.infoPanel.forEach(function(entry){
                 infoPanel.append("<li>" + 
@@ -65,21 +65,21 @@ $(function(){  // (1) All of our code to be run only when the DOM has been compl
                                     "</a>" + 
                                 "</li>");
             });
-        }
+        } 
 
-        return el;      // And then it will give us back the jQuery WRAPPER for that HTML ELEMENT 
+        return el;// And then it will give us back the jQuery WRAPPER for that HTML ELEMENT which is Reviews
     }
 
-    $.get('api/menu.json', function(data){ // (2) We asked a server to give us the content of the menu that JSON
+    $.get('api/menu.json', function(dataJson){ // (2) We asked a server to give us the content of the menu that JSON
         //data has been loaded.
         //console.log(data);
 
         //Clean inside of the <ul></ul>(#main-menu') element first
         container.empty(); 
 
-        data.forEach(function(menuItem){ // And then forEach element of that we built the menu item with MenuItem()
+        dataJson.forEach(function(menuItem){ //And then forEach element of that we built the menu item with MenuItem function
             container.append(buildMenuItem(menuItem)); // Adding the submenu inside of the "<ul></ul>"
-        })
+        }) // after that we run forEach to get JSON data, we made a function to create menu which is buildMenuItem and then we will create buildMenuItem separately(above ^)
 
         // Search Bar
         container.append('<li class="menu-item">' + 
@@ -116,16 +116,58 @@ $(function(){  // (1) All of our code to be run only when the DOM has been compl
     
 });
 
-// ------------------- Main Content ------------------------
+// -------------------------------------------- Main Content --------------------------------------------------
+
 $(function(){
 
+    function mainContentItems(data2){   // 2
+        let el2,
+            showCase;
+
+        el2 = $('<li class="content-items">' +
+                    '<h2 href="#" id="home">' + 
+                        data2.mainNews + 
+                    '</h2>' + 
+                '</li>' +
+                '<div id="sub-content">' + 
+                    '<ul>' + 
+                    '</ul>' +
+                '</div>'
+                );
+
+        if(data2.showCase && data2.showCase.length) {
+            showCase = $('#sub-content>ul', el2); 
+            data2.showCase.forEach(function(entry2){ 
+                showCase.append("<li>" + 
+                                    '<a href="#">' + 
+                                    entry2.title +
+                                        "<img class='sub-content-image' src='" + 
+                                        entry2.image + 
+                                        "'>" +
+                                        "<span>" +
+                                        entry2.news +
+                                        "</span>" +  
+                                    "</a>" + 
+                                "</li>");
+            });
+        }
+
+
+        return el2;
+    }
+
+
     let container2 = $('#main-content');
-        container2.empty();
+        
     
 
-    $.get('api/main-content.json', function(data2){
-        console.log(data2)
-        //Will be add main contents
+    $.get('api/main-content.json', function(dataJson2){ // 1
+        //console.log(dataJson2);
+        //container2.empty();
+
+        dataJson2.forEach(function(mainContent){
+            container2.append(mainContentItems(mainContent));
+        });
 
 
     })
