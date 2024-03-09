@@ -211,25 +211,40 @@ h2:first-of-type {
 
 /* Main Content */
 
-#main-content {
-    /* width:75%;
-    height: 60%; */
-    border: 1px solid black;
-    border-radius: 12px;
-}
-
-.content-items {
-    float: left;
-}
 
 .sub-content {
-    display: block;
+    border: 1px solid #ddd;
+    border-top: none;
+    background-color: #9d9898;
+    border-radius: 12px;
+    padding: 0.3em;
+    color: #333;
 }
-.sub-content-image {
-    float: left;
-    height: 120px;
-    width: 190px;
+
+.sub-content > ul > li > a {
+    position: relative;
+    text-align: center;
+    font-size: 1.2em;
+    display: grid;
+    justify-items:center;
+    text-decoration: none;
+    font-style: italic;
+    color: #eee;
+}
+
+#span-content {
+    position: relative;
+    top: -30px;
+    color: white;
+    background:grey;
+    opacity: 0.5;
+    width: 84%;
+}
+
+ .sub-content-image {
+    height: 100%;
+    width: 85%;
     padding: 0.2em;
     margin: 0.2em;
     border-radius: 12px;
-}
+} 

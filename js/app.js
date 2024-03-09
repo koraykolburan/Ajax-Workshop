@@ -124,31 +124,31 @@ $(function(){
         let el2,
             showCase;
 
-        el2 = $('<li class="content-items">' +
+        el2 = $('<li>' +
                     '<h2 href="#" id="home">' + 
                         data2.mainNews + 
                     '</h2>' + 
-                '</li>' +
-                '<div id="sub-content">' + 
-                    '<ul>' + 
-                    '</ul>' +
-                '</div>'
+                    '<div class="sub-content">' + 
+                        '<ul>' + 
+                        '</ul>' + 
+                    '</div>' +
+                '</li>'
                 );
 
-        if(data2.showCase && data2.showCase.length) {
-            showCase = $('#sub-content>ul', el2); 
+        if(data2.showCase && data2.showCase.length) {  // 3
+            showCase = $('div.sub-content>ul', el2); 
             data2.showCase.forEach(function(entry2){ 
                 showCase.append("<li>" + 
                                     '<a href="#">' + 
-                                    entry2.title +
-                                        "<img class='sub-content-image' src='" + 
-                                        entry2.image + 
-                                        "'>" +
-                                        "<span>" +
-                                        entry2.news +
-                                        "</span>" +  
+                                        entry2.title +
+                                            "<img class='sub-content-image' src='" + 
+                                                entry2.image + 
+                                            "'>" +
+                                            '<span id="span-content">' +
+                                                entry2.news +
+                                            '</span>' +  
                                     "</a>" + 
-                                "</li>");
+                                "</li>"); 
             });
         }
 
