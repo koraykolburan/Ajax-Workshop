@@ -125,7 +125,7 @@ $(function(){
             showCase;
 
         el2 = $('<li>' +
-                    '<h2 href="#" id="home">' + 
+                    '<h2 href="#" id="">' + 
                         data2.mainNews + 
                     '</h2>' + 
                     '<div class="sub-content">' + 
@@ -140,13 +140,15 @@ $(function(){
             data2.showCase.forEach(function(entry2){ 
                 showCase.append("<li>" + 
                                     '<a href="#">' + 
-                                        entry2.title +
-                                            "<img class='sub-content-image' src='" + 
-                                                entry2.image + 
-                                            "'>" +
-                                            '<span id="span-content">' +
-                                                entry2.news +
-                                            '</span>' +  
+                                        '<span id="span-content1">' + 
+                                            entry2.title +
+                                        '</span>' +
+                                        "<img class='sub-content-image' src='" + 
+                                            entry2.image + 
+                                        "'>" +
+                                        '<span id="span-content2">' +
+                                            entry2.news +
+                                        '</span>' +  
                                     "</a>" + 
                                 "</li>"); 
             });
