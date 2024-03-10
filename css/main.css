@@ -263,12 +263,12 @@ h2:first-of-type {
 
 /* Main Content */
 
-
 .sub-content {
     border-radius: 12px;
     padding: 0.3em 0 0.3em 0.3em;
     color: #333;
     width: 80%;
+    overflow: hidden;
 }
 
 .sub-content > ul > li > a {

@@ -1,4 +1,4 @@
-//----------------- NAVBAR --------------------------
+// --------------------------------------------    NAVBAR    --------------------------------------------------
 $(function(){  // (FIRST) All of our code to be run only when the DOM has been completely loaded.
     
     let container = $('#main-menu'); 
